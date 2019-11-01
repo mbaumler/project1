@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coming Soon</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
+        }
+
+        a:link {
+            text-decoration: none;
+            color: #651D38;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: #651D38;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #E62F20;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: deepskyblue;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+
+        .footer {
+            background-color: #651D38;
+            font-family: "Avenir", Arial, sans-serif;
+            text-align: center;
+            padding-top: 65px;
+            color: white;
+            position: relative;
+            width: 1180px;
+            height: 125px;
+            left: 15px;
+        }
+
+        p#home, p#about, p#now, p#coming, p#contact {
+            display: inline;
+            font-size: 24px;
+            font-family: "Avenir", Arial, sans-serif;
+            font-weight: bold;
+            padding: 0 25px;
+            line-height: 100px;
+        }
+
+        .logo {
+            margin-top: 30px;
+        }
+
+        body {
+            background: #e3dddf;
+        }
+
+        .container {
+            width: 1180px;
+            height: 800px;
+            position: relative;
+            margin: 0 auto;
+            background-color: #e3dddf;
+            border: 1px #e3dddf;
+        }
+
+        nav {
+            background-color: #e3dddf;
+            width: 800px;
+            height: 60px;
+            margin-left: 350px;
+        }
+
+        .rule {
+            background-color: #651D38;
+            height: 15px;
+            width: 1180px;
+            margin: 0 auto;
+            margin-top: 5px;
+        }
+
+        .movie {
+            height: 355px;
+            width: 600px;
+            position: relative;
+            top: 80px;
+            background-color: #651D38;
+            margin: 0 auto;
+            margin-top: 25px;
+        }
+
+        .hours {
+            background-color: #e3dddf;
+            font-family: "Avenir", Arial, sans-serif;
+            position: relative;
+            left: 1000px;
+            bottom: 300px;
+            width: 80px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .days {
+            background-color: #e3dddf;
+            font-family: "Avenir", Arial, sans-serif;
+            position: relative;
+            left: 1000px;
+            bottom: 300px;
+            width: 80px;
+            padding-top: 15px;
+        }
+
+        .line {
+            background-color: #e3dddf;
+            font-family: "Avenir", Arial, sans-serif;
+            position: relative;
+            left: 1045px;
+            bottom: 347px;
+            width: 80px;
+            color: #E62F20;
+            font-weight: bold;
+        }
+
+        .time {
+            background-color: #e3dddf;
+            display: inline;
+            font-family: "Avenir", Arial, sans-serif;
+            position: relative;
+            left: 1050px;
+            bottom: 389px;
+            width: 80px;
+            color: #1c4380;
+        }
+
+        .homealone {
+            position: relative;
+            left: 15px;
+            top: 15px;
+        }
+
+        .homealonecopy {
+            background-color: #651D38;
+            width: 300px;
+            font-size: 13px;
+            font-family: "Avenir", Arial, sans-serif;
+            color: white;
+            position: relative;
+            left: 265px;
+            bottom: 325px;
+        }
+
+        .santacopy {
+            background-color: #651D38;
+            width: 300px;
+            font-size: 13px;
+            font-family: "Avenir", Arial, sans-serif;
+            color: white;
+            position: relative;
+            left: 265px;
+            bottom: 325px;
+        }
+        .social {
+            display: inline;
+            position: relative;
+            bottom: 50px;
+            margin: 0 auto;
+            right: 280px;
+        }
+        h3 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">
+        <p>
+            <a href="home.html">
+                <img src="img/statetheatre.png" alt="State Theatre" height="150">
+            </a>
+        </p>
+    </div>
+    <nav>
+        <div id="top"></div>
+        <a href="home.html"><p id="home">Home</p></a>
+        <a href="about.html"><p id="about">About</p></a>
+        <a href="now.html"><p id="now">Now Showing</p></a>
+        <a href="coming.html"><p id="coming">Coming Soon</p></a>
+        <a href="contact.html"><p id="contact">Contact</p></a>
+    </nav>
+    <div class="rule"></div>
+    <div class="movie">
+        <div class="homealone">
+            <img src="img/movie.jpg" alt="Home Alone" height="325">
+        </div>
+        <div class="homealonecopy">
+            <a href="https://www.youtube.com/watch?v=owU3lMxd6jI&t=1s"><h3>Home Alone (PG)</h3></a>
+            <h4>November 16-November 30</h4>
+            <h4>Rotten Tomatoes: 65%</h4>
+            <p>When bratty 8-year-old Kevin McCallister (Macaulay Culkin) acts out the night before a family trip to
+                Paris, his mother (Catherine O'Hara) makes him sleep in the attic. After the McCallisters mistakenly
+                leave for the airport without Kevin, he awakens to an empty house and assumes his wish to have no family
+                has come true. But his excitement sours when he realizes that two con men (Joe Pesci, Daniel Stern) plan
+                to rob the McCallister residence, and that he alone must protect the family home.</p>
+        </div>
+    </div>
+    <div class="movie">
+        <div class="homealone">
+            <img src="img/movie2.jpg" alt="Home Alone" height="325">
+        </div>
+        <div class="santacopy">
+            <a href="https://www.youtube.com/watch?v=Bx8FX7etF_8"><h3><h3>The Santa Claus (PG)</h3></a>
+            <h4>December 1-December 16</h4>
+            <h4>Rotten Tomatoes: 74%</h4>
+            <p>Divorced dad Scott (Tim Allen) has custody of his son (Eric Lloyd) on Christmas Eve. After he
+                accidentally kills a man in a Santa suit, they are magically transported to the North Pole, where an elf
+                explains that Scott must take Santa's place before the next Christmas arrives. Scott thinks he's
+                dreaming, but over the next several months he gains weight and grows an inexplicably white beard. Maybe
+                that night at the North Pole wasn't a dream after all -- and maybe Scott has a lot of work to do.</p>
+        </div>
+    </div>
+    <div class="hours">HOURS</div>
+    <div>
+        <div class="days">M-Th<br>F-Sun</div>
+        <div class="line">|<br>|</div>
+        <div class="time">12pm-10pm<br>12pm-12am</div>
+    </div>
+    <div class="footer">221 W Main St, Kasson, MN 55944 | kassontheatre.com | 507-634-6300
+        <div class="social">
+            <a href="https://www.facebook.com/State-Theatre-243513276563/">
+                <img src="img/facebook(3).png" width="32">
+                <img src="img/envelope.png" width="32">
+            </a>
+        </div>
+    </div>
+
+</div><!-- end of container -->
+</body>
+</html>

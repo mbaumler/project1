@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+
+    <style>
+        a:link {
+            text-decoration: none;
+            color: #651D38;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: #651D38;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #E62F20;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: deepskyblue;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+
+        .footer {
+            background-color: #651D38;
+            font-family: "Avenir", Arial, sans-serif;
+            text-align: center;
+            padding-top: 65px;
+            color: white;
+            position: absolute;
+            width: 1180px;
+            height: 100px;
+        }
+
+        p#home, p#about, p#now, p#coming, p#contact {
+            display: inline;
+            font-size: 24px;
+            font-family: "Avenir", Arial, sans-serif;
+            font-weight: bold;
+            padding: 0 25px;
+            line-height: 100px;
+        }
+
+        .logo {
+            margin-top: 30px;
+        }
+
+        body {
+            background: #e3dddf;
+        }
+
+        .container {
+            width: 1180px;
+            height: 700px;
+            position: relative;
+            margin: 0 auto;
+            background-color: #e3dddf;
+            border: 1px #e3dddf;
+        }
+
+        nav {
+            background-color: #e3dddf;
+            width: 800px;
+            height: 60px;
+            margin-left: 350px;
+        }
+
+        .rule {
+            background-color: #651D38;
+            height: 15px;
+            width: 1180px;
+            margin: 0 auto;
+            margin-top: 5px;
+        }
+
+        .movie {
+            height: 300px;
+            width: 700px;
+            background-color: #651D38;
+            margin: 0 auto;
+            margin-top: 70px;
+        }
+
+        .form {
+            font-family: "Avenir", Arial, sans-serif;
+            color: white;
+            width: 800px;
+            position: relative;
+            left: 450px;
+            bottom: 250px;
+        }
+
+        .comment {
+            width: 300px;
+            height: 100px;
+            position: relative;
+            top: 20px;
+        }
+        .google-map {
+            font-family: "Avenir", Arial, sans-serif;
+            color: #651D38;
+            text-align: center;
+            position: relative;
+            bottom: 125px;
+        }
+        .pattern {
+            position: relative;
+            bottom: 375px;
+        }
+        .social {
+            display: inline;
+            position: relative;
+            bottom: 50px;
+            margin: 0 auto;
+            right: 260px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">
+        <p>
+            <a href="home.html">
+                <img src="img/statetheatre.png" alt="State Theatre" height="150">
+            </a>
+        </p>
+    </div>
+    <nav>
+        <div id="top"></div>
+        <a href="home.html"><p id="home">Home</p></a>
+        <a href="about.html"><p id="about">About</p></a>
+        <a href="now.html"><p id="now">Now Showing</p></a>
+        <a href="coming.html"><p id="coming">Coming Soon</p></a>
+        <a href="contact.html"><p id="contact">Contact</p></a>
+    </nav>
+    <div class="rule"></div>
+    <div class="movie">
+    </div>
+    <div class="form">
+        <form action="action_page.php">
+            First name: <input type="text" name="FirstName" value="Bob"><br>
+            Last name: <input type="text" name="LastName" value="Anderson"><br>
+            Comment/Question: <input class="comment" type="text" name="Comment" value="Comment"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <!--    <div class="footer">221 W Main St, Kasson, MN 55944 | kassontheatre.com</div>-->
+    <div class="google-map">
+        <h2>Visit Us</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2868.5949165023817!2d-92.75400768511349!3d44.02976483601771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f7405bdfe5c98f%3A0x5a7ae55f21fda4e1!2sState%20Theatre!5e0!3m2!1sen!2sus!4v1572445607486!5m2!1sen!2sus"
+                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </iframe>
+    </div>
+    <div class="pattern">
+        <img src="img/pattern2.png" width="300">
+    </div>
+    <div class="footer">221 W Main St, Kasson, MN 55944 | kassontheatre.com | 507-634-6300
+        <div class="social">
+            <a href="https://www.facebook.com/State-Theatre-243513276563/">
+                <img src="img/facebook(3).png" width="32">
+                <img src="img/envelope.png" width="32">
+            </a>
+        </div>
+    </div>
+</div><!-- end of container -->
+</body>
+</html>
