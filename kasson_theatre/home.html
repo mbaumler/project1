@@ -141,6 +141,7 @@
             padding-top: 65px;
             color: white;
             position: absolute;
+            bottom: 0px;
             width: 1180px;
             height: 125px;
         }
@@ -155,16 +156,20 @@
         }
 
         .logo {
-            margin-top: 30px;
+            margin-top: 50px;
+            margin-left: 80px;
         }
 
         body {
             background: #e3dddf;
+            background-image: url("img/patternsmall3.png");
+            margin-left: 75px;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
         }
 
         .container {
             width: 1180px;
-            height: 800px;
             position: relative;
             margin: 0 auto;
             background-color: #e3dddf;
@@ -188,10 +193,11 @@
 
         .mission {
             background-color: #e3dddf;
-            width: 250px;
+            font-size: 18px;
+            text-align: center;
+            width: 500px;
             position: relative;
-            right: 50px;
-            bottom: 275px;
+            margin: 0 auto;
             font-family: "Avenir", Arial, sans-serif;
             color: #651D38;
         }
@@ -239,16 +245,12 @@
             width: 80px;
             color: #1c4380;
         }
+
         .slideshow-container {
             width: 700px;
             margin-top: 75px;
         }
-        .pattern {
-            position: absolute;
-            width: 1180px;
-            top: 725px;
-            right: 150px;
-        }
+
         .social {
             display: inline;
             position: relative;
@@ -277,77 +279,44 @@
         <a href="contact.html"><p id="contact">Contact</p></a>
     </nav>
     <div class="rule"></div>
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
 
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-                <div class="numbertext"></div>
-                <img src="img/slide1.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext"></div>
-                <img src="img/slide2.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext"></div>
-                <img src="img/slide3.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext"></div>
-                <img src="img/moviewatcher4.jpg" style="width:100%">
-            </div>
-
-
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="img/slide1.jpg" style="width:100%">
         </div>
-        <br>
 
-<!--        &lt;!&ndash; The dots/circles &ndash;&gt;-->
-<!--        <div style="text-align:center">-->
-<!--            <span class="dot" onclick="currentSlide(1)"></span>-->
-<!--            <span class="dot" onclick="currentSlide(2)"></span>-->
-<!--            <span class="dot" onclick="currentSlide(3)"></span>-->
-<!--        </div>-->
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="img/slide2.jpg" style="width:100%">
+        </div>
 
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="img/slide3.jpg" style="width:100%">
+        </div>
 
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
+        <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="img/moviewatcher4.jpg" style="width:100%">
+        </div>
 
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-    </script>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!--        &lt;!&ndash; The dots/circles &ndash;&gt;-->
+    <!--        <div style="text-align:center">-->
+    <!--            <span class="dot" onclick="currentSlide(1)"></span>-->
+    <!--            <span class="dot" onclick="currentSlide(2)"></span>-->
+    <!--            <span class="dot" onclick="currentSlide(3)"></span>-->
+    <!--        </div>-->
+
     <div class="mission">We strive to provide
         families with quality
         movies and experiences.
@@ -365,18 +334,50 @@
         <div class="line">|<br>|</div>
         <div class="time">12pm-10pm<br>12pm-12am</div>
     </div>
-    <div class="pattern">
-        <img src="img/pattern.png" width="1500">
-    </div>
     <div class="footer">221 W Main St, Kasson, MN 55944 | kassontheatre.com | 507-634-6300
-    <div class="social">
-        <a href="https://www.facebook.com/State-Theatre-243513276563/">
-            <img src="img/facebook(3).png" width="32">
-            <img src="img/envelope.png" width="32">
-        </a>
-    </div>
+        <div class="social">
+            <a href="https://www.facebook.com/State-Theatre-243513276563/">
+                <img src="img/facebook(3).png" width="32">
+                <img src="img/envelope.png" width="32">
+            </a>
+        </div>
     </div>
 
 </div><!-- end of container -->
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
 </body>
 </html>
